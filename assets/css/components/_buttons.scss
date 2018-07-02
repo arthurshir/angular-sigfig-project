@@ -1,0 +1,16 @@
+button {
+  border-radius: $border-radius;
+  border: none;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background-color: $button-color;
+  &:hover {
+    background-color: $button-hover-color;
+  }
+  &:focus {
+    outline: 0;
+  }
+}

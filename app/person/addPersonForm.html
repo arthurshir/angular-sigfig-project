@@ -1,0 +1,11 @@
+<div class="title3">Add Person</div>
+<editable-field edit-mode="true" field="'Name'" field-value="$ctrl.person.name"></editable-field>
+<editable-field edit-mode="true" field="'Email'" field-value="$ctrl.person.email"></editable-field>
+<span>Company: </span><select ng-model="$ctrl.person.companyId" required>
+   <option value="" disabled="" selected="">Select Company</option>
+   <option ng-repeat="company in $ctrl.companies" value="{{company._id}}">{{company.name}}</option>
+</select>
+<div style="height: 16px;"></div>
+
+<button ng-click="$ctrl.create()">Create</button>
+<button ng-click="$ctrl.cancel()">Cancel</button>

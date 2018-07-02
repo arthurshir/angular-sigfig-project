@@ -1,0 +1,9 @@
+<div class="title3">Add Company</div>
+<editable-field edit-mode="true" field="'Name'" field-value="$ctrl.company.name"></editable-field>
+<editable-field edit-mode="true" field="'Address'" field-value="$ctrl.company.address"></editable-field>
+<editable-field edit-mode="true" field="'Revenue'" field-value="$ctrl.company.revenue" field-type="number"></editable-field>
+<editable-field edit-mode="true" field="'Phone'" field-value="$ctrl.company.phone"></editable-field>
+<div style="height:16px;"></div>
+
+<button ng-click="$ctrl.create()">Create</button>
+<button ng-click="$ctrl.cancel()">Cancel</button>

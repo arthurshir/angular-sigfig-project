@@ -1,0 +1,15 @@
+<div>
+  <div class="horizontal-line"></div>
+  <b><span ng-bind="$ctrl.company.name" class="title3"></span></b><br>
+  <div style="height: 8px;"></div>
+  <editable-field edit-mode="$ctrl.editMode" field="'Address'" field-value="$ctrl.company.address"></editable-field>
+  <editable-field edit-mode="$ctrl.editMode" field="'Revenue'" field-value="$ctrl.company.revenue" field-type="number"></editable-field>
+  <editable-field edit-mode="$ctrl.editMode" field="'Phone'" field-value="$ctrl.company.phone"></editable-field>
+  <div style="height: 8px;"></div>
+  <button ng-click="$ctrl.toggleShowPersonList()">Show Person List</button>
+  <button ng-click="$ctrl.editMode ? $ctrl.update() : $ctrl.handleModeChange()">{{$ctrl.editMode ? 'Update' : 'Edit'}}</button>
+  <button ng-if="$ctrl.editMode" ng-click="$ctrl.reset()">Cancel</button>
+  <div ng-show="$ctrl.showPersonList">
+    <person-list company="$ctrl.company"></person-list>
+  </div>
+</div>

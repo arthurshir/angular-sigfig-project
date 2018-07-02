@@ -1,0 +1,23 @@
+<div class="content-wrapper">
+  <span class="title1">Sigfig RFT Web App</span><br>
+  <div style="height: 20px;"></div>
+  <button ng-click="$ctrl.toggleShowAddCompany()">Add Company</button>
+  <button ng-click="$ctrl.toggleShowAddPerson()">Add Person</button>
+  <div style="height: 10px;"></div>
+  <div ng-show="$ctrl.showAddCompany">
+    <div class="content-panel">
+      <add-company-form on-create="$ctrl.createCompany({company: company})" on-cancel="$ctrl.toggleShowAddCompany()"></add-company-form>
+    </div>
+    <div style="height: 10px;"></div>
+  </div>
+  <div ng-show="$ctrl.showAddPerson">
+    <div class="content-panel">
+      <add-person-form on-create="$ctrl.createPerson({person: person})" on-cancel="$ctrl.toggleShowAddPerson()" companies="$ctrl.companies"></add-person-form>
+    </div>
+    <div style="height: 10px;"></div>
+  </div>
+  <div class="content-panel">
+    <span class="title3"><b>Company List</b></span><br>
+    <company-list companies="$ctrl.companies"></company-list>
+  </div>
+</div>

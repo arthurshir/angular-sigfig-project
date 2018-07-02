@@ -1,0 +1,8 @@
+<div>
+  <div class="horizontal-line"></div>
+  <editable-field edit-mode="$ctrl.editMode" field="'Name'" field-value="$ctrl.person.name"></editable-field>
+  <editable-field edit-mode="$ctrl.editMode" field="'Email'" field-value="$ctrl.person.email"></editable-field>
+  <button ng-click="$ctrl.editMode ? $ctrl.update() : $ctrl.handleModeChange()">{{$ctrl.editMode ? 'Update' : 'Edit'}}</button>
+  <button ng-if="$ctrl.editMode" ng-click="$ctrl.reset()">Cancel</button>
+  <button ng-if="$ctrl.editMode" ng-click="$ctrl._delete()">Delete</button>
+</div>

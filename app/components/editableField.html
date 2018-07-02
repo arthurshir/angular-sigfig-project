@@ -1,0 +1,15 @@
+<span ng-switch="$ctrl.editMode">
+  <div ng-switch-when="true">
+    <div style="display: flex; align-items: center;">
+      <span ng-bind="$ctrl.field + ':'"></span>
+      <div style="width: 6px;"></div>
+      <input style="flex: 1;" type="{{$ctrl.fieldType}}" ng-model="$ctrl.fieldValue">
+    </div>
+    <div style="height:8px;"></div>
+  </div>
+  <span ng-switch-default>
+    <span ng-bind="$ctrl.field + ':'"></span>
+    <span ng-bind="$ctrl.fieldValue"></span>
+    <br>
+  </span>
+</span>

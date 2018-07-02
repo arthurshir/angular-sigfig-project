@@ -1,0 +1,8 @@
+<div class="person-list">
+<div ng-show="!$ctrl.people.length">
+  <div style="height:4px;"></div>
+  <span>No People</span>
+</div>
+<person-item ng-repeat="person in $ctrl.people" on-delete="$ctrl.deletePerson({person: person})" person="person">
+</person-item>
+</div>
